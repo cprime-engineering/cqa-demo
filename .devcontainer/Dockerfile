@@ -1,9 +1,13 @@
 FROM mcr.microsoft.com/vscode/devcontainers/universal:2-linux
 
-# ** [Optional] Uncomment this section to install additional packages. **
-# USER root
-#
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-#
-# USER codespace
+# As root user ------------------------------------------------------------------------------------------------
+USER root
+
+# copy codespace .bashrc --------------------------------------------------------------------------------------
+COPY home/codespace/.bashrc /home/codespace/.bashrc
+
+# copy toolkit directory --------------------------------------------------------------------------------------
+COPY opt/toolkit /opt/toolkit
+
+# As codespace user -------------------------------------------------------------------------------------------
+USER codespace
