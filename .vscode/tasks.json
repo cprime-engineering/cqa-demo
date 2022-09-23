@@ -12,6 +12,19 @@
 			"runOptions": {
 				"runOn": "folderOpen"
 			}
+		},
+		{
+			"label": "Authenticate snyk",
+			"type": "shell",
+			"command": "snyk auth $SNYK_TOKEN",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"runOptions": {
+				"runOn": "folderOpen"
+			}
 		}
+
 	]
 }
