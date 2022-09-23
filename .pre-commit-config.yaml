@@ -32,3 +32,7 @@ repos:
         exclude: /test/
       - id: cpd
         exclude: /test/
+  - repo: https://github.com/fabasoad/pre-commit-snyk
+    rev: v0.1.0
+    hooks:
+      - id: snyk-test
