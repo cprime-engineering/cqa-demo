@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"davidanson.vscode-markdownlint",
+		"ms-vscode.makefile-tools",
+		"github.copilot",
+		"vscjava.vscode-java-pack"
+	],
+	"unwantedRecommendations": []
+}

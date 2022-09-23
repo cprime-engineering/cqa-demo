@@ -13,10 +13,11 @@ repos:
     rev: v1.20.0
     hooks:
       - id: yamllint
-  - repo: https://github.com/petalmd/dockerfile-pre-commit
-    rev: 'v1.0' 
+  - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+    rev: v0.1.0
     hooks:
-      - id: dockerlint
+      - id: dockerfilelint
+        exclude: .devcontainer
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
     rev: v2.2.0
     hooks:

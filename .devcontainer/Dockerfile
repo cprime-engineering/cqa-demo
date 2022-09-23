@@ -11,3 +11,6 @@ COPY opt/toolkit /opt/toolkit
 
 # As codespace user -------------------------------------------------------------------------------------------
 USER codespace
+
+# Install pre-commit ------------------------------------------------------------------------------------------
+RUN pip install pre-commit

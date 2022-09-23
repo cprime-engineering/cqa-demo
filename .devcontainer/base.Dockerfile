@@ -27,7 +27,7 @@ ENV SHELL=/bin/bash \
     PIPX_HOME="/usr/local/py-utils" \
     PIPX_BIN_DIR="/usr/local/py-utils/bin" \
     RVM_PATH="/usr/local/rvm" \
-    RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev" \ 
+    RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev" \
     GOROOT="/usr/local/go" \
     GOPATH="/go" \
     SDKMAN_DIR="/usr/local/sdkman" \
@@ -40,7 +40,7 @@ ENV PATH="${NVM_DIR}/current/bin:${NPM_GLOBAL}/bin:${PYTHON_ROOT}/current/bin:${
 COPY library-scripts/* setup-user.sh setup-python-tools.sh first-run-notice.txt /tmp/scripts/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
-    && yes | unminimize 2>&1 \ 
+    && yes | unminimize 2>&1 \
     # Run common script and setup user
     && bash /tmp/scripts/common-debian.sh "true" "${USERNAME}" "${USER_UID}" "${USER_GID}" "true" "true" "true" \
     && bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
@@ -118,7 +118,7 @@ RUN bash /tmp/scripts/gradle-debian.sh "latest" "${SDKMAN_DIR}" "${USERNAME}" "t
 RUN bash /tmp/scripts/go-debian.sh "latest" "${GOROOT}" "${GOPATH}" "${USERNAME}" \
     && apt-get clean -y && rm -rf /tmp/scripts
 
-# Mount for docker-in-docker 
+# Mount for docker-in-docker
 VOLUME [ "/var/lib/docker" ]
 
 # Fire Docker/Moby script if needed along with Oryx's benv

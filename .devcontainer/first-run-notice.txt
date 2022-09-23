@@ -1,4 +1,4 @@
-👋 Welcome to Codespaces! You are on the Cprime Labs default image. 
+👋 Welcome to Codespaces! You are on the Cprime Labs default image.
    - It includes runtimes and tools for Python, Node.js, Docker, and more.
    - Want to use a customize this image? Learn more here: https://aka.ms/configure-codespace
 
