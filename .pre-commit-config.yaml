@@ -1,0 +1,33 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.20.0
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/petalmd/dockerfile-pre-commit
+    rev: 'v1.0' 
+    hooks:
+      - id: dockerlint
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.2.0
+    hooks:
+      - id: pretty-format-java
+        args: [--autofix]
+      - id: pretty-format-kotlin
+        args: [--autofix]
+  - repo: https://github.com/gherynos/pre-commit-java
+    rev: v0.1.0
+    hooks:
+      - id: pmd
+        exclude: /test/
+      - id: cpd
+        exclude: /test/
