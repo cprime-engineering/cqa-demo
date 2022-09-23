@@ -5,7 +5,11 @@
 		"davidanson.vscode-markdownlint",
 		"ms-vscode.makefile-tools",
 		"github.copilot",
-		"vscjava.vscode-java-pack"
+		"vscjava.vscode-java-pack",
+		"ms-azuretools.vscode-docker",
+		"dotjoshjohnson.xml",
+		"vscjava.vscode-maven",
+		"pivotal.vscode-boot-dev-pack"
 	],
 	"unwantedRecommendations": []
 }
