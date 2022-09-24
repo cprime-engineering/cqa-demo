@@ -98,7 +98,7 @@ During initial development, the major version will be 0 (e.g., `0.x.y`), which i
 stable API. Once we hit `1.0.0`, we will make every effort to maintain a backwards compatible API and use the MAJOR,
 MINOR, and PATCH versions on each release to indicate any incompatibilities.
 
-Publication of the CHANGELOG for this repo is automated using [git-changelog](https://github.com/git-chglog/git-chglog) in the style of [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+Publication of the CHANGELOG for this repo is automated using [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator) in the style of [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Architectural Decisions
 
