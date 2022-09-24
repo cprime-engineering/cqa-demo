@@ -8,9 +8,9 @@
 [![Chat on Gitter](https://img.shields.io/badge/community%20&%20support-chat%20on%20gitter-ED1846)](https://gitter.im/cprime-elite-engineering/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
-# fibonacci-service-spring-boot
+# cqa-demo
 
-A spring boot microservice implementation for the Fibonacci DevOps demo.
+A Spring Boot microservice implementation fibonaacci calculator to demonstrate advanced code quality assurance automation.
 
 ## Build Status
 
@@ -32,10 +32,6 @@ A spring boot microservice implementation for the Fibonacci DevOps demo.
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=code_smells)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_index)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
 
-## Overview
-
-This is one of three repositories required to fully implement the Fibonacci DevOps demo.
-
 ## Documentation
 
 Comprehensive documentation for this repo can be found in the [github pages](https://cprime-labs.github.io/fibonacci-service-spring-boot/) website hosted within this repo.
@@ -50,13 +46,12 @@ Follow these steps to fully implement this repo:
 
 ### Step 0: GitHub.
 
-If you are viewing this readme by any other means go to the canonical repository on [GitHub](https://github.com/cprime-labs/fibonacci-service-spring-boot) for the most up to date version of this repo.
+If you are viewing this readme by any other means go to the canonical repository on [GitHub](https://github.com/cprime-labs/cqa-demo) for the most up to date version of this repo.
 
-### Step 1: Launch Gitpod IDE.
+### Step 1: Launch Codespaces.
 
-* If you don't already have it installed we recommend using the [GitPod Browser Extension](https://www.gitpod.io/docs/browser-extension/).
-* On the home page for this repo, select the branch you want to base your work on then click 'GitPod'. Alternatively click this url https://gitpod.io/#https://github.com/cprime-labs/fibonacci-service-spring-boot
-* Gitpod will now launch.
+* On the home page for this repo, select the branch you want to base your work on then click the '<> Code' dropdown. Select the codespaces tab and select 'Create codespace in the secondary menu on the branch you want to work on.
+* Codespaces will now launch.
 
 ### Step 3: Run the tests.
 
@@ -76,7 +71,7 @@ If you are viewing this readme by any other means go to the canonical repository
 The following tools are not strictly required to work with this repo but we recommend their use and used them oursleves in the creation of this repo:
 
 * [GitHub](https://GitHub.com): GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
-* [VS Code](https://code.visualstudio.com/): Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.
+* [Codespaces](https://docs.github.com/es/codespaces/overview): A codespace is a development environment that's hosted in the cloud. You can customize your project for GitHub Codespaces by committing configuration files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.
 
 ## Who maintains this repo?
 
