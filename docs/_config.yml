@@ -1,0 +1,14 @@
+---
+remote_theme: just-the-docs/just-the-docs
+title: CQA Demo Docs
+description: "A Spring Boot microservice fibonaacci calculator
+to demonstrate advanced code quality assurance automation."
+url: https://cprime-labs.github.io/
+baseurl: cqa-demo/
+color_scheme: dark
+aux_links:
+  "Fork me on GitHub":
+    - "//github.com/cprime-labs/cqa-demo/"
+  "v0.0.0":
+    - "//github.com/cprime-labs/cqa-demo//tags"
+aux_links_new_tab: true
