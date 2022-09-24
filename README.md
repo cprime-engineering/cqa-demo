@@ -10,7 +10,7 @@
 
 # cqa-demo
 
-A Spring Boot microservice implementation fibonaacci calculator to demonstrate advanced code quality assurance automation.
+A Spring Boot microservice fibonaacci calculator to demonstrate advanced code quality assurance automation.
 
 ## Build Status
 
