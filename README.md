@@ -38,7 +38,7 @@ Comprehensive documentation for this repo can be found in the [github pages](htt
 
 ## Project Management
 
-Tasks and issues that relate to development of this repo can be found in this repo's [project board](https://github.com/cprime-labs/fibonacci-service-spring-boot/projects/1).
+Tasks and issues that relate to development of this repo can be found in this repo's [project board](https://github.com/orgs/cprime-labs/projects/1/views/1).
 
 ## How to use this repo
 
@@ -102,7 +102,7 @@ Publication of the CHANGELOG for this repo is automated using [github-changelog-
 
 ## Architectural Decisions
 
-All architectural decisions made in the authoring of this repo are captured as a log of [Architecture Decision Records](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) (ADRs). This log can be found in the [adr/en](adr/en) sub directory of this repo.
+All architectural decisions made in the authoring of this repo are captured as a log of [Architecture Decision Records](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) (ADRs). This log can be found in the [docs/adr](docs/adr) sub directory of this repo and in our documentation site on GitHub pages.
 
 Creation of architecural decision records relating to this repo is automated using [adr-tools](https://github.com/npryce/adr-tools).
 

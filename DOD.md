@@ -10,7 +10,7 @@
 - [ ] Any new makefiles have been commited to the `./make` directory or a remote git repository containing shared makefiles.
 - [ ] Solution has been documented in markdown files within the `./docs` directory of the repository root on the branch to be merged.
 - [ ] Git commit messages reference an issue ID by hashtag on the branch to be merged.
-- [ ] The final commit message on the branch to be merged will result in gerneration of [CHANGELOG](/CHANGELOG.md) entries by [git-chglog](https://github.com/git-chglog/git-chglog) eg:
+- [ ] The final commit message on the branch to be merged will result in gerneration of [CHANGELOG](/CHANGELOG.md) entries by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator) eg:
     * doc: *"commit message goes here"* (#*"issue number goes here"*)
     * adr: *"commit message goes here"* (#*"issue number goes here"*)
     * feat: *"commit message goes here"* (#*"issue number goes here"*)
