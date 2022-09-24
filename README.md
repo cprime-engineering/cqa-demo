@@ -34,7 +34,7 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 
 ## Documentation
 
-Comprehensive documentation for this repo can be found in the [github pages](https://cprime-labs.github.io/fibonacci-service-spring-boot/) website hosted within this repo.
+Comprehensive documentation for this repo can be found in the [github pages](https://cprime-labs.github.io/cqa-demo/) website hosted within this repo.
 
 ## Project Management
 
