@@ -1,5 +1,5 @@
 ---
-name: sonarcloud analysis
+name: Sonarcloud Analysis
 
 on:
   # Runs on pushes targeting the default branch

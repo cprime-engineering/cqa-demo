@@ -7,30 +7,27 @@
 [![Latest](https://img.shields.io/badge/latest-0.0.0-ED1846)](https://github.com/cprime-labs/cqa-demo/releases/tag/v0.0.0)
 [![Chat on Gitter](https://img.shields.io/badge/community%20&%20support-chat%20on%20gitter-ED1846)](https://gitter.im/cprime-elite-engineering/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-
 # cqa-demo
 
 A Spring Boot microservice fibonaacci calculator to demonstrate advanced code quality assurance automation.
 
 ## Build Status
-
-![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/unit-test.yml/badge.svg)
-![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/sonarcloud-analysis.yml/badge.svg)
-![](https://github.com/cprime-labs/fibonacci-service-spring-boot/actions/workflows/publish.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/publish-github-pages.yml/badge.svg)
 
 ## Sonarcloud Analysis
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=alert_status)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=security_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=bugs)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=ncloc)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=coverage)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=code_smells)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_fibonacci-service-spring-boot&metric=sqale_index)](https://sonarcloud.io/dashboard?id=cprime-labs_fibonacci-service-spring-boot)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=bugs)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=coverage)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 
 ## Documentation
 
