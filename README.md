@@ -13,16 +13,13 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 
 ## Build Status
 
-### Analize
+### Analyze
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/codeql-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk.yml/badge.svg)
 
-### Package and Deploy
-![](https://github.com/cprime-labs/cqa-demo//actions/workflows/test-and-publish.yml/badge.svg)
-![](https://github.com/cprime-labs/cqa-demo//actions/workflows/publish-github-pages.yml/badge.svg)
 
-## Sonarcloud Analysis
+#### Sonarcloud
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
@@ -35,6 +32,10 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=coverage)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
+
+### Package and Deploy
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/test-and-publish.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/publish-github-pages.yml/badge.svg)
 
 ## Documentation
 
