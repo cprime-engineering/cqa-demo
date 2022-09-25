@@ -12,9 +12,13 @@
 A Spring Boot microservice fibonaacci calculator to demonstrate advanced code quality assurance automation.
 
 ## Build Status
+
+### Analize
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/codeql-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk.yml/badge.svg)
+
+### Package and Deploy
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/test-and-publish.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/publish-github-pages.yml/badge.svg)
 
