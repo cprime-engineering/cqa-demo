@@ -14,6 +14,7 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 ## Build Status
 
 ### Analyze
+![](https://img.shields.io/badge/dependabot-enabled-brightgreen)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/codeql-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk.yml/badge.svg)
