@@ -1,7 +1,8 @@
-name: Build
+name: sonarcloud analysis
 on:
   push:
-    branches: ["main"]
+  schedule:
+    - cron:  '0 3 * * *'
 jobs:
   build:
     name: Build
