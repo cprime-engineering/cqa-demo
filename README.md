@@ -19,7 +19,7 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk.yml/badge.svg)
 
 
-#### Sonarcloud
+#### Sonarcloud Report
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
