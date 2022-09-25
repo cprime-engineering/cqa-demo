@@ -10,10 +10,10 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cprime</groupId>
-	<artifactId>fibonacci-service</artifactId>
+	<artifactId>fibonacci-service-cqa-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fibonacci-service</name>
-	<description>A spring boot microservice implementation for the Fibonacci DevOps demo.</description>
+	<description>A spring boot microservice implementation for the CQA demo.</description>
 
 	<properties>
 		<java.version>11</java.version>
