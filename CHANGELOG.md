@@ -1,11 +1,14 @@
 # Changelog
 
-## [Unreleased](https://github.com/cprime-labs/cqa-demo/tree/HEAD)
+## [v0.0.1](https://github.com/cprime-labs/cqa-demo/tree/v0.0.1) (2022-09-25)
 
-[Full Changelog](https://github.com/cprime-labs/cqa-demo/compare/v0.0.0...HEAD)
+[Full Changelog](https://github.com/cprime-labs/cqa-demo/compare/v0.0.0...v0.0.1)
 
 **Closed issues:**
 
+- Add test and publish maven packages action [\#5](https://github.com/cprime-labs/cqa-demo/issues/5)
+- Add sonarcloud analysis action [\#4](https://github.com/cprime-labs/cqa-demo/issues/4)
+- Add GitHub pages action [\#3](https://github.com/cprime-labs/cqa-demo/issues/3)
 - add changelog generator [\#2](https://github.com/cprime-labs/cqa-demo/issues/2)
 - install and configure adr-tools [\#1](https://github.com/cprime-labs/cqa-demo/issues/1)
 
