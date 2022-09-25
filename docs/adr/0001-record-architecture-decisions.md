@@ -1,6 +1,13 @@
-# 1. Record architecture decisions
+---
+layout: default
+title: Record Architecture Decisions
+parent: Architectural Decision Record
+nav_order: 1
+---
 
-Date: 2022-09-24
+# 1. Record Architecture Decisions
+
+Date: 2021-10-12
 
 ## Status
 
