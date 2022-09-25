@@ -18,7 +18,7 @@ git push origin --tags
 
 ## Publish the Release
 
-https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
+[GitHub Documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
 ## Generate Changelog
 
