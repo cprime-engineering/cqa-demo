@@ -1,9 +1,16 @@
 version: 2
 updates:
-  # Enable version updates for mvn
-  - package-ecosystem: "mvn"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
-    schedule:
-      interval: "daily"
+- package-ecosystem: maven
+  directory: "/"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  schedule:
+    - cron: '44 17 * * 0'
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "daily"
