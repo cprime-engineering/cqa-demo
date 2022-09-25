@@ -52,7 +52,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHubApache Maven Packages</name>
-			<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+			<url>https://maven.pkg.github.com/cprime-labs/cqa-demo</url>
 		</repository>
 	</distributionManagement>
 
