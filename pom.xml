@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.4</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
+		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cprime</groupId>
 	<artifactId>fibonacci-service</artifactId>
@@ -17,46 +19,48 @@
 		<java.version>11</java.version>
 		<github.global.server>github</github.global.server>
 		<snakeyaml.version>1.32</snakeyaml.version>
+		<sonar.organization>cprime-labs</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 	<repositories>
 		<repository>
-		<id>central</id>
-		<name>central</name>
-		<url>https://repo1.maven.org/maven2</url>
-		<releases>
-			<enabled>true</enabled>
-		</releases>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
+			<id>central</id>
+			<name>central</name>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 		<repository>
-		<id>github</id>
-		<name>github</name>
-		<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
-		<releases>
-			<enabled>true</enabled>
-		</releases>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
+			<id>github</id>
+			<name>github</name>
+			<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHubApache Maven Packages</name>
-      <url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
-    </repository>
-  </distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHubApache Maven Packages</name>
+			<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+		</repository>
+	</distributionManagement>
 
-  <scm>
-    <connection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</connection>
-    <developerConnection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</developerConnection>
-    <url>https://github.com/cprime-labs/fibonacci-service-spring-boot</url>
-  </scm>
+	<scm>
+		<connection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</connection>
+		<developerConnection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</developerConnection>
+		<url>https://github.com/cprime-labs/fibonacci-service-spring-boot</url>
+	</scm>
 
 
 	<dependencies>
@@ -77,7 +81,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		<plugin>
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.4</version>
