@@ -37,6 +37,14 @@ fibonacci-service/package-local:
 	mvn package
 
 #--------------------------------------------------------------------------------------------------------------
+# scan local
+#--------------------------------------------------------------------------------------------------------------
+# Scan the fibonacci-service in container for vulnerabilities.
+#--------------------------------------------------------------------------------------------------------------
+fibonacci-service/scan-local: fibonacci-service/containerize-local
+	grype fibonacci-service:latest
+
+#--------------------------------------------------------------------------------------------------------------
 #
 # End fibonacci-service make targets
 #

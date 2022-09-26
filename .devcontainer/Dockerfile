@@ -21,8 +21,11 @@ RUN npm install snyk -g
 # Install github_changelog_generator --------------------------------------------------------------------------
 RUN gem install github_changelog_generator
 
-# As root user ------------------------------------------------------------------------------------------------
+# As codespace user -------------------------------------------------------------------------------------------
 USER codespace
+
+# Install grype -----------------------------------------------------------------------------------------------
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b ~/grype
 
 # Install adr-tools -------------------------------------------------------------------------------------------
 RUN git clone https://github.com/npryce/adr-tools.git ~/adr-tools \
