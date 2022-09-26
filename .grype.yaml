@@ -1,2 +1,3 @@
 ignore:
   - vulnerability: CVE-2016-1000027
+  # https://security-tracker.debian.org/tracker/CVE-2016-1000027
