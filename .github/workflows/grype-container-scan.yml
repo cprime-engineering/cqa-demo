@@ -1,0 +1,24 @@
+---
+name: Grype Container Scan
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: build local container
+        uses: docker/build-push-action@v2
+        with:
+          tags: localbuild/testimage:latest
+          push: false
+          load: true
+      - name: Scan image
+        uses: anchore/scan-action@v3
+        with:
+          image: "localbuild/testimage:latest"
