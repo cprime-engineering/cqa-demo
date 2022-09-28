@@ -1,3 +1,5 @@
 {
-    "task.allowAutomaticTasks": "on"
+    "task.allowAutomaticTasks": "on",
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.preferredLightColorTheme": "Default Dark+"
 }
