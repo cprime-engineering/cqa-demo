@@ -1,5 +1,5 @@
 ---
-name: Hadolint
+name: Hadolint Linter
 on:
   push:
     branches: ["main"]

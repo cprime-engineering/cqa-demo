@@ -20,6 +20,7 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/codeql-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk-maven.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/hadolint.yml/badge.svg)
 
 
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk-docker.yml/badge.svg)
