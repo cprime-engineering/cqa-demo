@@ -14,7 +14,7 @@ jobs:
         id: yaml-data
         uses: jbutcher5/read-yaml@main
         with:
-          file: ".deployment.yml"
+          file: ".environment.yml"
           key-path: '["environment"]'
       - name: Display read-yaml output
         run: echo "${{ steps.yaml-data.outputs.data }}"
