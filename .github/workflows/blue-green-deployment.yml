@@ -22,12 +22,12 @@ jobs:
       environment: ${{ steps.yaml-data.outputs.data }}
   deploy:
     environment:
-      name: ${{ steps.read-yaml-deployment-environment.outputs.environment }}
-      url: ${{ steps.read-yaml-deployment-environment.outputs.environment }}
+      name: ${{ needs.read-yaml-deployment-environment.outputs.environment }}
+      url: ${{ needs.read-yaml-deployment-environment.outputs.environment }}
     runs-on: ubuntu-latest
     needs: read-yaml-deployment-environment
     steps:
       - name: Deploy to Blue Green Environment
         id: deployment
         run: >
-          echo ${{ steps.read-yaml-deployment-environment.outputs.environment }}
+          echo ${{ needs.read-yaml-deployment-environment.outputs.environment }}
