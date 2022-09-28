@@ -43,6 +43,7 @@ fibonacci-service/package-local:
 #--------------------------------------------------------------------------------------------------------------
 fibonacci-service/scan-local: fibonacci-service/containerize-local
 	grype fibonacci-service:latest
+	snyk container test  fibonacci-service:latest
 
 #--------------------------------------------------------------------------------------------------------------
 #
