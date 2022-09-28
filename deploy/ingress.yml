@@ -1,0 +1,12 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cqa-demo
+  labels:
+    app: cqa-demo
+    tier: backend
+spec:
+  backend:
+    serviceName: cqa-demo
+    servicePort: 8080
