@@ -1,5 +1,5 @@
 ---
-name: Snyk Container Security Analysis
+name: Snyk Container Scan
 on: push
 jobs:
   snyk:
