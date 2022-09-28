@@ -1,5 +1,5 @@
 ---
-name: Snyk Security Analysis
+name: Snyk Maven Security Analysis
 on:
   push:
     branches: ["main"]
