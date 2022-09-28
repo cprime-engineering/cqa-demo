@@ -8,12 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     name: read-yaml
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run read-yaml action
         id: yaml-data
         uses: jbutcher5/read-yaml@main
         with:
-          file: '.deployment.yml'
+          file: ".deployment.yml"
           key-path: '["environment"]'
       - name: Display read-yaml output
         run: echo "${{ steps.yaml-data.outputs.data }}"
+    outputs:
+      environment: ${{ steps.yaml-data.outputs.data }}
+  deploy:
+    environment:
+      name: ${{ steps.read-yaml-deployment-environment.outputs.environment }}
+      url: ${{ steps.read-yaml-deployment-environment.outputs.environment }}
+    runs-on: ubuntu-latest
+    needs: read-yaml-deployment-environment
+    steps:
+      - name: Deploy to Blue Green Environment
+        id: deployment
+        run: >
+          echo ${{ steps.read-yaml-deployment-environment.outputs.environment }}
