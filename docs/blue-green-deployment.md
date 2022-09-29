@@ -31,6 +31,8 @@ kubectl delete namespace green
 
 ## Manual Deployment
 
+### Blue
+
 kubectl apply -f deploy/deployment.yml --namespace blue --dry-run=client
 
 kubectl apply -f deploy/deployment.yml --namespace blue
@@ -38,3 +40,13 @@ kubectl apply -f deploy/deployment.yml --namespace blue
 kubectl apply -f deploy/service.yml --namespace blue
 
 kubectl apply -f deploy/ingress.yml --namespace blue
+
+### Green
+
+kubectl apply -f deploy/deployment.yml --namespace green --dry-run=client
+
+kubectl apply -f deploy/deployment.yml --namespace green
+
+kubectl apply -f deploy/service.yml --namespace green
+
+kubectl apply -f deploy/ingress.yml --namespace green

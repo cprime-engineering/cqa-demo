@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cqa-demo
-          image: mcr.microsoft.com/azuredocs/aks-helloworld:v1
+          image: ghcr.io/cprime-labs/cqa-demo:main
           ports:
             - containerPort: 8080
           env:
