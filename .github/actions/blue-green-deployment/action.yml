@@ -15,6 +15,12 @@ inputs:
   AZ_TENANT_ID:
     required: true
     default: ''
+  AZ_RESOURCE_GROUP_NAME:
+    required: true
+    default: ''
+  AZ_AKS_CLUSTER_NAME:
+    required: true
+    default: ''
   VERSION:
     required: true
     default: ''
