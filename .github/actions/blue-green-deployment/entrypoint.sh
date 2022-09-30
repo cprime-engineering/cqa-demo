@@ -21,9 +21,15 @@ echo "::endgroup::"
 
 # Group --------------------------------------------------------------------------------------------
 echo "::group::Set Environment Variables"
-    echo "Version: $INPUT_VERSION"
-    export VERSION=$INPUT_VERSION
-    echo "Environment: $INPUT_ENVIRONMENT"
-    export ENVIRONMENT=$INPUT_ENVIRONMENT
+    echo "App Version: $INPUT_VERSION"
+    export APP_VERSION=$INPUT_VERSION
+echo "::endgroup::"
+# End Group ----------------------------------------------------------------------------------------
+
+# Group --------------------------------------------------------------------------------------------
+echo "::group::Kubectl Apply"
+    kubectl apply -f deploy/deployment.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/service.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/ingress.yml --namespace $INPUT_ENVIRONMENT
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------
