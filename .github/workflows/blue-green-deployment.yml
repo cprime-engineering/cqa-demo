@@ -1,8 +1,11 @@
 ---
 name: Blue Green Deployment
 on:
-  push:
-    branches: ["main"]
+  workflow_run:
+    workflows: ["Test and Publish Maven and Docker Packages"]
+    branches: [main]
+    types:
+      - completed
 jobs:
   read-yaml:
     runs-on: ubuntu-latest
