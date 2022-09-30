@@ -17,7 +17,7 @@ spec:
         - name: cqa-demo
           image: ghcr.io/cprime-labs/cqa-demo:main
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           env:
             - name: TITLE
               value: "Code Quality Assurance Automation Demo"
