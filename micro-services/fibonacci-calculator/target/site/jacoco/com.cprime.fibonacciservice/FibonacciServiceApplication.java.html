@@ -6,10 +6,10 @@ import com.cprime.fibonacciservice.health.FibonacciServiceStatus;
 import com.cprime.fibonacciservice.utils.FibonacciServiceUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -30,15 +30,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
   /** Add cors mappings. */
   @Bean
-	public WebMvcConfigurer corsConfigurer() {
-<span class="fc" id="L34">		return new WebMvcConfigurer() {</span>
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
+  public WebMvcConfigurer corsConfigurer() {
+<span class="fc" id="L34">    return new WebMvcConfigurer() {</span>
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
 <span class="fc" id="L37">        registry.addMapping(&quot;/&quot;).allowedOrigins(&quot;*&quot;);</span>
-<span class="fc" id="L38">				registry.addMapping(&quot;/**&quot;).allowedOrigins(&quot;*&quot;);</span>
-<span class="fc" id="L39">			}</span>
-		};
-	}
+<span class="fc" id="L38">        registry.addMapping(&quot;/**&quot;).allowedOrigins(&quot;*&quot;);</span>
+<span class="fc" id="L39">      }</span>
+    };
+  }
 
   /** Request handler for root http requests. */
   @GetMapping

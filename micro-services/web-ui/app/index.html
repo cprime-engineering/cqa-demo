@@ -14,6 +14,16 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+    <script>
+      "use strict";
+      
+      fetch('https://api-green.cqa-demo.io/fibonacci/12')
+      .then(response => response.json())
+      .then(data => {
+        alert('Fibonacci Value Is : ' + data.fibonacciValue)
+      })
+      .catch(error => console.error(error))
+      </script>
     {{content-for "body"}}
 
     <p id="p1">cqa-demo</p>

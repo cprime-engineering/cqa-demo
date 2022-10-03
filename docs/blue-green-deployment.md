@@ -33,10 +33,14 @@ kubectl delete namespace cqa-demo-green
 
 ## Manual Deployment
 
-kubectl apply -f deploy/fibonacci-calculator-deployment.yml --namespace cqa-demo-blue --dry-run=client
+kubectl apply -f deploy/api-deployment.yml --namespace cqa-demo-blue --dry-run=client
 
-kubectl apply -f deploy/fibonacci-calculator-deployment.yml --namespace cqa-demo-blue
+kubectl apply -f deploy/api-deployment.yml --namespace cqa-demo-green
 
-kubectl apply -f deploy/fibonacci-calculator-service.yml --namespace cqa-demo-blue
+kubectl apply -f deploy/api-service.yml --namespace cqa-demo-green
 
-kubectl apply -f deploy/web-ui-ingress.yml --namespace cqa-demo-blue
+kubectl apply -f deploy/web-ui-deployment.yml --namespace cqa-demo-green
+
+kubectl apply -f deploy/web-ui-service.yml --namespace cqa-demo-green
+
+kubectl apply -f deploy/web-ui-ingress.yml --namespace cqa-demo-green
