@@ -37,4 +37,4 @@ repos:
     hooks:
       - id: snyk-test
         args:
-          - ./micro-services/fibonacci-service
+          - ./micro-services/fibonacci-calculator
