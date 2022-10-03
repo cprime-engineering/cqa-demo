@@ -1,10 +1,11 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-fibonacci-service,com.cprime.fibonacciservice.health,FibonacciServiceStatus,0,5,0,0,0,2,0,2,0,2
-fibonacci-service,com.cprime.fibonacciservice.utils,FibonacciServiceUtils,0,33,0,6,0,13,0,6,0,3
-fibonacci-service,com.cprime.fibonacciservice,FibonacciNumber,0,17,0,0,0,7,0,5,0,5
-fibonacci-service,com.cprime.fibonacciservice,FibonacciCalculator,0,70,0,4,0,15,0,4,0,2
-fibonacci-service,com.cprime.fibonacciservice,RestExceptionHandler,0,34,0,0,0,8,0,4,0,4
-fibonacci-service,com.cprime.fibonacciservice,FibonacciServiceApplication,0,22,0,0,0,7,0,5,0,5
-fibonacci-service,com.cprime.fibonacciservice.apierror,ApiError,0,28,0,0,0,10,0,5,0,5
-fibonacci-service,com.cprime.fibonacciservice.exceptions,FibonacciIndexOutOfBoundsException,0,4,0,0,0,2,0,1,0,1
-fibonacci-service,com.cprime.fibonacciservice.exceptions,FibonacciIndexWrongTypeException,0,4,0,0,0,2,0,1,0,1
+fibonacci-calculator,com.cprime.fibonacciservice.health,FibonacciServiceStatus,0,5,0,0,0,2,0,2,0,2
+fibonacci-calculator,com.cprime.fibonacciservice.utils,FibonacciServiceUtils,0,33,0,6,0,13,0,6,0,3
+fibonacci-calculator,com.cprime.fibonacciservice,FibonacciServiceApplication.new WebMvcConfigurer() {...},0,29,0,0,0,4,0,2,0,2
+fibonacci-calculator,com.cprime.fibonacciservice,FibonacciNumber,0,17,0,0,0,7,0,5,0,5
+fibonacci-calculator,com.cprime.fibonacciservice,FibonacciCalculator,0,70,0,4,0,15,0,4,0,2
+fibonacci-calculator,com.cprime.fibonacciservice,RestExceptionHandler,0,34,0,0,0,8,0,4,0,4
+fibonacci-calculator,com.cprime.fibonacciservice,FibonacciServiceApplication,0,27,0,0,0,8,0,6,0,6
+fibonacci-calculator,com.cprime.fibonacciservice.apierror,ApiError,0,28,0,0,0,10,0,5,0,5
+fibonacci-calculator,com.cprime.fibonacciservice.exceptions,FibonacciIndexOutOfBoundsException,0,4,0,0,0,2,0,1,0,1
+fibonacci-calculator,com.cprime.fibonacciservice.exceptions,FibonacciIndexWrongTypeException,0,4,0,0,0,2,0,1,0,1

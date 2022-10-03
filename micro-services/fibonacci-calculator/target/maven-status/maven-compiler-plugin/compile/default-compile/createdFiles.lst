@@ -1,4 +1,5 @@
 com/cprime/fibonacciservice/health/FibonacciServiceStatus.class
+com/cprime/fibonacciservice/FibonacciServiceApplication$1.class
 com/cprime/fibonacciservice/RestExceptionHandler.class
 com/cprime/fibonacciservice/FibonacciCalculator.class
 com/cprime/fibonacciservice/exceptions/FibonacciIndexOutOfBoundsException.class

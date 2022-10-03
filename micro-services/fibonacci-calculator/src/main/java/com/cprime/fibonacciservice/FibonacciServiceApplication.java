@@ -6,9 +6,12 @@ import com.cprime.fibonacciservice.health.FibonacciServiceStatus;
 import com.cprime.fibonacciservice.utils.FibonacciServiceUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * Spring Boot Aplication to serve the fibonacci calculator REST microservice.
@@ -23,6 +26,18 @@ public class FibonacciServiceApplication {
   /** Default contructor. */
   public static void main(final String[] args) {
     SpringApplication.run(FibonacciServiceApplication.class, args);
+  }
+
+  /** Add cors mappings. */
+  @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/").allowedOrigins("*");
+        registry.addMapping("/**").allowedOrigins("*");
+      }
+    };
   }
 
   /** Request handler for root http requests. */
