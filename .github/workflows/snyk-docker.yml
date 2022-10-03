@@ -18,9 +18,13 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build jar
-        run: mvn --batch-mode package
+        run: >
+          cd ./micro-services/fibonacci-calculator
+          && mvn --batch-mode package
       - name: Build a Docker image
-        run: docker build -t localbuild/testimage:latest .
+        run: >
+          docker build -t localbuild/testimage:latest
+          ./micro-services/fibonacci-calculator
       - name: Run Snyk to check Docker image for vulnerabilities
         continue-on-error: true
         uses: snyk/actions/docker@master
@@ -28,7 +32,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: localbuild/testimage:latest
-          args: --file=Dockerfile
+          args: --file=./micro-services/fibonacci-calculator/Dockerfile
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
