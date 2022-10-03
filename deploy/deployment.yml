@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cqa-demo
-          image: ghcr.io/cprime-labs/cqa-demo:$(APP_VERSION)
+          image: ghcr.io/cprime-labs/cqa-demo:main
           ports:
             - containerPort: 8080
           env:
