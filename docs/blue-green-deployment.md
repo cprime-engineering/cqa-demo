@@ -21,13 +21,13 @@ kubectl get namespaces
 
 kubectl describe namespaces cqa-demo-blue
 
-kubectl describe namespaces cqa-demo-blue
+kubectl describe namespaces cqa-demo-green
 
 ## Delete Namespaces
 
 kubectl delete namespace cqa-demo-blue
 
-kubectl delete namespace cqa-demo-blue
+
 
 ## Manual Deployment
 
