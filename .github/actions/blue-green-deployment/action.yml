@@ -21,7 +21,7 @@ inputs:
   AZ_AKS_CLUSTER_NAME:
     required: true
     default: ''
-  VERSION:
+  APP_VERSION:
     required: true
     default: ''
   ENVIRONMENT:

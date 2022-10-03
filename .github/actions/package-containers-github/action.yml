@@ -13,7 +13,7 @@ inputs:
   PASSWORD:
     required: true
     default: ''
-  VERSION:
+  APP_VERSION:
     required: true
     default: ''
 runs:

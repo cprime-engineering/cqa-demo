@@ -17,13 +17,13 @@ echo "::endgroup::"
 # Group --------------------------------------------------------------------------------------------
 echo "::group::Build Container Images"
     # fibonacci-service
-    docker build -f Dockerfile -t ghcr.io/cprime-labs/cqa-demo:$INPUT_VERSION .
+    docker build -f Dockerfile -t ghcr.io/cprime-labs/cqa-demo/fibonacci-service:$INPUT_APP_VERSION .
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------
 
 # Group --------------------------------------------------------------------------------------------
 echo "::group::Push Container Images"
     # fibonacci-service
-    docker push ghcr.io/cprime-labs/cqa-demo:$INPUT_VERSION
+    docker push ghcr.io/cprime-labs/cqa-demo/fibonacci-service:$INPUT_APP_VERSION
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------

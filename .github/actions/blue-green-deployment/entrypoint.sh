@@ -21,8 +21,8 @@ echo "::endgroup::"
 
 # Group --------------------------------------------------------------------------------------------
 echo "::group::Set Environment Variables"
-    echo "App Version: $INPUT_VERSION"
-    export APP_VERSION=$INPUT_VERSION
+    echo "App Version: $INPUT_APP_VERSION"
+    export APP_VERSION=$INPUT_APP_VERSION
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------
 

@@ -41,5 +41,5 @@ jobs:
           AZ_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
           AZ_RESOURCE_GROUP_NAME: ${{ secrets.AZ_RESOURCE_GROUP_NAME }}
           AZ_AKS_CLUSTER_NAME: ${{ secrets.AZ_AKS_CLUSTER_NAME }}
-          VERSION: ${{ github.sha }}
+          APP_VERSION: ${{ github.sha }}
           ENVIRONMENT: ${{ needs.read-yaml.outputs.environment }}
