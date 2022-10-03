@@ -18,8 +18,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: code test
-          args:
-            - ./micro-services/fibonacci-calculator
+          args: ./micro-services/fibonacci-calculator
   opensource-monitor:
     runs-on: ubuntu-latest
     needs: code-security
@@ -31,5 +30,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
-          args:
-            - ./micro-services/fibonacci-calculator
+          args: ./micro-services/fibonacci-calculator
