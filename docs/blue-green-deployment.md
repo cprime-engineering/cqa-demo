@@ -27,6 +27,8 @@ kubectl describe namespaces cqa-demo-green
 
 kubectl delete namespace cqa-demo-blue
 
+kubectl delete namespace cqa-demo-green
+
 
 
 ## Manual Deployment

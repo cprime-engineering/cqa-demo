@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  web:
+  web-ui:
     image: web-ui:latest
     env_file:
       - .env
@@ -8,3 +8,7 @@ services:
       - 4200
     ports:
       - 4200:4200
+  fibonacci-calculator:
+    image: fibonacci-calculator:latest
+    ports:
+      - 8080:8080

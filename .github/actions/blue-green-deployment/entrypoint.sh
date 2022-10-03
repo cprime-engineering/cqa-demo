@@ -21,8 +21,12 @@ echo "::endgroup::"
 
 # Group --------------------------------------------------------------------------------------------
 echo "::group::Kubectl Apply"
+    # web-ui
+    kubectl apply -f deploy/web-ui-deployment.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/web-ui-service.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/web-ui-ingress.yml --namespace $INPUT_ENVIRONMENT
+    # fibonacci-service
     kubectl apply -f deploy/fibonacci-calculator-deployment.yml --namespace $INPUT_ENVIRONMENT
     kubectl apply -f deploy/fibonacci-calculator-service.yml --namespace $INPUT_ENVIRONMENT
-    kubectl apply -f deploy/fibonacci-calculator-ingress.yml --namespace $INPUT_ENVIRONMENT
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------
