@@ -13,21 +13,21 @@ https://learn.microsoft.com/en-us/azure/aks/ingress-basic?tabs=azure-cli
 
 ## Create Namespaces
 
-kubectl create namespace blue
+kubectl create namespace cqa-demo-blue
 
-kubectl create namespace green
+kubectl create namespace cqa-demo-green
 
 kubectl get namespaces
 
-kubectl describe namespaces blue
+kubectl describe namespaces cqa-demo-blue
 
-kubectl describe namespaces green
+kubectl describe namespaces cqa-demo-blue
 
 ## Delete Namespaces
 
-kubectl delete namespace blue
+kubectl delete namespace cqa-demo-blue
 
-kubectl delete namespace green
+kubectl delete namespace cqa-demo-blue
 
 ## Manual Deployment
 
