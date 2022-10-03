@@ -23,9 +23,9 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build jar
-        run: mvn --batch-mode package
+        run: cd ./micro-services/fibonacci-calculator && mvn --batch-mode package
       - name: Build the container image
-        run: docker build . --file Dockerfile --tag localbuild/testimage:latest
+        run: docker build --file ./micro-services/fibonacci-calculatorDockerfile --tag localbuild/testimage:latest ./micro-services/fibonacci-calculator
       - uses: anchore/scan-action@v3
         with:
           image: "localbuild/testimage:latest"
