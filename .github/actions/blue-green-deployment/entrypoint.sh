@@ -20,16 +20,9 @@ echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------
 
 # Group --------------------------------------------------------------------------------------------
-echo "::group::Set Environment Variables"
-    echo "App Version: $INPUT_APP_VERSION"
-    export APP_VERSION=$INPUT_APP_VERSION
-echo "::endgroup::"
-# End Group ----------------------------------------------------------------------------------------
-
-# Group --------------------------------------------------------------------------------------------
 echo "::group::Kubectl Apply"
-    kubectl apply -f deploy/deployment.yml --namespace $INPUT_ENVIRONMENT
-    kubectl apply -f deploy/service.yml --namespace $INPUT_ENVIRONMENT
-    kubectl apply -f deploy/ingress.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/fibonacci-calculator-deployment.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/fibonacci-calculator-service.yml --namespace $INPUT_ENVIRONMENT
+    kubectl apply -f deploy/fibonacci-calculator-ingress.yml --namespace $INPUT_ENVIRONMENT
 echo "::endgroup::"
 # End Group ----------------------------------------------------------------------------------------

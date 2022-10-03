@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: cqa-demo-ingress
+  name: fibonacci-calculator-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
@@ -12,17 +12,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /cqa-demo(/|$)(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: cqa-demo
-                port:
-                  number: 80
           - path: /(.*)
             pathType: Prefix
             backend:
               service:
-                name: cqa-demo
+                name: fibonacci-calculator
                 port:
                   number: 80
