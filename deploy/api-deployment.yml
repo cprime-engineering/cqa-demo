@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fibonacci-calculator
+  name: api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fibonacci-calculator
+      app: api
   template:
     metadata:
       labels:
-        app: fibonacci-calculator
+        app: api
     spec:
       containers:
-        - name: fibonacci-calculator
+        - name: api
           image: ghcr.io/cprime-labs/cqa-demo/fibonacci-calculator:latest
           ports:
             - containerPort: 8080
