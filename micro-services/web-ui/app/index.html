@@ -16,7 +16,21 @@
   <body>
     {{content-for "body"}}
 
-    <p>cqa-demo</p>
+    <p id="p1">cqa-demo</p>
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/web-ui.js"></script>
+
+    <script type="text/javascript">
+      var apiUrl = 'https://blue.cqa-demo.io/fibonacci/12';
+      fetch(apiUrl).then(response => {
+        return response.json();
+      }).then(data => {
+        document.getElementById("p1").innerHTML = data;
+      }).catch(err => {
+        // Do something for an error here
+      });
+  </script>
 
     {{content-for "body-footer"}}
   </body>
