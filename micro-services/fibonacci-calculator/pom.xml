@@ -10,9 +10,9 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cprime</groupId>
-	<artifactId>fibonacci-service-cqa-demo</artifactId>
+	<artifactId>fibonacci-calculator-cqa-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fibonacci-service</name>
+	<name>fibonacci-calculator</name>
 	<description>A spring boot microservice implementation for the CQA demo.</description>
 
 	<properties>
@@ -38,7 +38,7 @@
 		<repository>
 			<id>github</id>
 			<name>github</name>
-			<url>https://maven.pkg.github.com/cprime-labs/fibonacci-service-spring-boot</url>
+			<url>https://maven.pkg.github.com/cprime-labs/fibonacci-calculator-spring-boot</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -57,9 +57,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</connection>
-		<developerConnection>scm:git:https://github.com/cprime-labs/fibonacci-service-spring-boot.git</developerConnection>
-		<url>https://github.com/cprime-labs/fibonacci-service-spring-boot</url>
+		<connection>scm:git:https://github.com/cprime-labs/cqa-demo.git</connection>
+		<developerConnection>scm:git:https://github.com/cprime-labs/cqa-demo.git</developerConnection>
+		<url>https://github.com/cprime-labs/cqa-demo</url>
 	</scm>
 
 
