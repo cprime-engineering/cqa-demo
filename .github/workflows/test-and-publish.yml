@@ -67,4 +67,4 @@ jobs:
           REGISTRY: ghcr.io
           USER_NAME: ${{ github.actor }}
           PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          APP_VERSION: ${{ github.sha }}
+          APP_VERSION: latest
