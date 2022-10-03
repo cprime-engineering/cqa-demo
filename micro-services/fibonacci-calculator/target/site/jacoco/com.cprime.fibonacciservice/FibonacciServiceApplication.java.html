@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FibonacciServiceApplication.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">fibonacci-service</a> &gt; <a href="index.source.html" class="el_package">com.cprime.fibonacciservice</a> &gt; <span class="el_source">FibonacciServiceApplication.java</span></div><h1>FibonacciServiceApplication.java</h1><pre class="source lang-java linenums">package com.cprime.fibonacciservice;
+
+import com.cprime.fibonacciservice.exceptions.FibonacciIndexOutOfBoundsException;
+import com.cprime.fibonacciservice.exceptions.FibonacciIndexWrongTypeException;
+import com.cprime.fibonacciservice.health.FibonacciServiceStatus;
+import com.cprime.fibonacciservice.utils.FibonacciServiceUtils;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Spring Boot Aplication to serve the fibonacci calculator REST microservice.
+ *
+ * @author @devopskev
+ */
+@SpringBootApplication
+@RestController
+@SuppressWarnings(&quot;PMD.AtLeastOneConstructor&quot;)
+<span class="fc" id="L21">public class FibonacciServiceApplication {</span>
+
+  /** Default contructor. */
+  public static void main(final String[] args) {
+<span class="fc" id="L25">    SpringApplication.run(FibonacciServiceApplication.class, args);</span>
+<span class="fc" id="L26">  }</span>
+
+  /** Request handler for root http requests. */
+  @GetMapping
+  public FibonacciServiceStatus root() {
+<span class="fc" id="L31">    return new FibonacciServiceStatus();</span>
+  }
+
+  /** Request handler for /health http requests. */
+  @GetMapping(path = &quot;/health&quot;)
+  public FibonacciServiceStatus health() {
+<span class="fc" id="L37">    return new FibonacciServiceStatus();</span>
+  }
+
+  /** Request handler for /fibonacci/ http requests. */
+  @GetMapping(path = &quot;/fibonacci/{fibonacciIndex}&quot;)
+  public FibonacciNumber fibonacci(final @PathVariable(&quot;fibonacciIndex&quot;) String fibonacciIndex)
+      throws FibonacciIndexOutOfBoundsException, FibonacciIndexWrongTypeException {
+
+<span class="fc" id="L45">    FibonacciServiceUtils.validateInteger(fibonacciIndex);</span>
+
+<span class="fc" id="L47">    return FibonacciCalculator.calculateFiboacciNumberByIndex(Integer.parseInt(fibonacciIndex));</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

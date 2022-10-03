@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cqa-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cqa-demo
+  template:
+    metadata:
+      labels:
+        app: cqa-demo
+    spec:
+      containers:
+        - name: cqa-demo
+          image: ghcr.io/cprime-labs/cqa-demo/fibonacci-calculator:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: TITLE
+              value: "Code Quality Assurance Automation Demo"

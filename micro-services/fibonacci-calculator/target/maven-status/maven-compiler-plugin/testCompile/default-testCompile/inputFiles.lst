@@ -1,0 +1,3 @@
+/workspaces/cqa-demo/micro-services/fibonacci-calculator/src/test/java/com/cprime/fibonacciservice/FibonacciCalculatorTests.java
+/workspaces/cqa-demo/micro-services/fibonacci-calculator/src/test/java/com/cprime/fibonacciservice/FibonacciServiceApplicationTests.java
+/workspaces/cqa-demo/micro-services/fibonacci-calculator/src/test/java/com/cprime/fibonacciservice/utils/FibonacciServiceUtilsTests.java

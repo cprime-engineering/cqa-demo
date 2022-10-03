@@ -19,7 +19,11 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/sonarcloud-analysis.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/codeql-analysis.yml/badge.svg)
-![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk-maven.yml/badge.svg)
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/hadolint.yml/badge.svg)
+
+
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/snyk-docker.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/grype-container-scan.yml/badge.svg)
 
 
@@ -37,9 +41,12 @@ A Spring Boot microservice fibonaacci calculator to demonstrate advanced code qu
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=cprime-labs_cqa-demo&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=cprime-labs_cqa-demo)
 
-### Package and Deploy
+### Package
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/test-and-publish.yml/badge.svg)
 ![](https://github.com/cprime-labs/cqa-demo//actions/workflows/publish-github-pages.yml/badge.svg)
+
+### Deploy
+![](https://github.com/cprime-labs/cqa-demo//actions/workflows/blue-green-deployment.yml/badge.svg)
 
 ## Documentation
 

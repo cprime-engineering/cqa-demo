@@ -3,7 +3,7 @@ name: Test and Publish Maven and Docker Packages
 on:
   push:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: "0 3 * * *"
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'zulu'
+          distribution: "zulu"
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
@@ -32,7 +32,7 @@ jobs:
             ${{ matrix.java }}${{ matrix.os }}
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
-        run: mvn test
+        run: cd ./micro-services/fibonacci-calculator && mvn test
         env:
           MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
           MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
@@ -57,25 +57,14 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Deploy jar to maven packages repository
-        run: mvn --batch-mode deploy
+        run: cd ./micro-services/fibonacci-calculator && mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Log in to github container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      - name: Package GitHub Containers
+        id: package-github-containiers
+        uses: ./.github/actions/package-containers-github
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-      - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          file: Dockerfile
+          REGISTRY: ghcr.io
+          USER_NAME: ${{ github.actor }}
+          PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          APP_VERSION: latest

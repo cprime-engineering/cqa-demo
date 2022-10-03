@@ -15,8 +15,14 @@ USER codespace
 # Install pre-commit ------------------------------------------------------------------------------------------
 RUN pip install pre-commit
 
+# install azure-cli --------------------------------------------------------------------------------
+RUN pip install azure-cli
+
 # Install snyk ------------------------------------------------------------------------------------------------
 RUN npm install snyk -g
+
+# Install ember-cli -------------------------------------------------------------------------------------------
+RUN npm install -g ember-cli
 
 # Install github_changelog_generator --------------------------------------------------------------------------
 RUN gem install github_changelog_generator

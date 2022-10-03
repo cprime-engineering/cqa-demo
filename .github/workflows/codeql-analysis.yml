@@ -26,8 +26,8 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: ${{ matrix.language }}
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+      - name: Build
+        run: cd ./micro-services/fibonacci-calculator && mvn package
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:

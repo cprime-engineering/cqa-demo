@@ -1,0 +1,32 @@
+---
+name: "Blue Green Deployment"
+author: "Cprime Labs"
+branding:
+  icon: "code"
+  color: "blue"
+description: "Deploy between two production ready environments in Azure AKS."
+inputs:
+  AZ_USER_NAME:
+    required: true
+    default: ''
+  AZ_PASSWORD:
+    required: true
+    default: ''
+  AZ_TENANT_ID:
+    required: true
+    default: ''
+  AZ_RESOURCE_GROUP_NAME:
+    required: true
+    default: ''
+  AZ_AKS_CLUSTER_NAME:
+    required: true
+    default: ''
+  APP_VERSION:
+    required: true
+    default: ''
+  ENVIRONMENT:
+    required: true
+    default: ''
+runs:
+  using: "docker"
+  image: "Dockerfile"

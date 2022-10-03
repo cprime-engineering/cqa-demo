@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RestExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">fibonacci-service</a> &gt; <a href="index.source.html" class="el_package">com.cprime.fibonacciservice</a> &gt; <span class="el_source">RestExceptionHandler.java</span></div><h1>RestExceptionHandler.java</h1><pre class="source lang-java linenums">package com.cprime.fibonacciservice;
+
+import com.cprime.fibonacciservice.apierror.ApiError;
+import com.cprime.fibonacciservice.exceptions.FibonacciIndexOutOfBoundsException;
+import com.cprime.fibonacciservice.exceptions.FibonacciIndexWrongTypeException;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+/**
+ * Handle custom exceptions to provide meaningful error responses to API consumers.
+ *
+ * @author @devopskev
+ */
+@Order(Ordered.HIGHEST_PRECEDENCE)
+@ControllerAdvice
+@SuppressWarnings({&quot;PMD.AtLeastOneConstructor&quot;, &quot;PMD.CommentSize&quot;})
+<span class="fc" id="L22">public class RestExceptionHandler extends ResponseEntityExceptionHandler {</span>
+
+  private ResponseEntity&lt;Object&gt; buildResponseEntity(final ApiError apiError) {
+<span class="fc" id="L25">    return new ResponseEntity&lt;&gt;(apiError, apiError.getStatus());</span>
+  }
+
+  /**
+   * Handle wrong type of object being passed to API such as a string that can not be parsed to an
+   * integer.
+   */
+  @ExceptionHandler(FibonacciIndexWrongTypeException.class)
+  protected ResponseEntity&lt;Object&gt; handleIndexWrongType(
+      final FibonacciIndexWrongTypeException typeException) {
+<span class="fc" id="L35">    final ApiError apiError =</span>
+<span class="fc" id="L36">        new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, typeException.getMessage(), typeException);</span>
+<span class="fc" id="L37">    return buildResponseEntity(apiError);</span>
+  }
+
+  /**
+   * Handle indexes that fall outside the range this API can handle these are values below 0 and
+   * above 75.
+   */
+  @ExceptionHandler(FibonacciIndexOutOfBoundsException.class)
+  protected ResponseEntity&lt;Object&gt; handleIndexOutOfBounds(
+      final FibonacciIndexOutOfBoundsException indexException) {
+<span class="fc" id="L47">    final ApiError apiError =</span>
+<span class="fc" id="L48">        new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, indexException.getMessage(), indexException);</span>
+<span class="fc" id="L49">    return buildResponseEntity(apiError);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

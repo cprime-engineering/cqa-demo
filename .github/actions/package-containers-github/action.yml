@@ -1,0 +1,21 @@
+---
+name: 'Build and Package the cqa-demo Container Images'
+description: >
+  'Automate build of cqa-demo containers images to GitHub container registry'
+author: "Cprime"
+inputs:
+  REGISTRY:
+    required: true
+    default: ''
+  USER_NAME:
+    required: true
+    default: ''
+  PASSWORD:
+    required: true
+    default: ''
+  APP_VERSION:
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
