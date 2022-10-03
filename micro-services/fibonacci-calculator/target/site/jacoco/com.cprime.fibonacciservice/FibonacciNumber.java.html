@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FibonacciNumber.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">fibonacci-service</a> &gt; <a href="index.source.html" class="el_package">com.cprime.fibonacciservice</a> &gt; <span class="el_source">FibonacciNumber.java</span></div><h1>FibonacciNumber.java</h1><pre class="source lang-java linenums">package com.cprime.fibonacciservice;
+
+/**
+ * Object to represent a fidonacci number and its index in the fibonacci sequence.
+ *
+ * @author @devopskev
+ */
+@SuppressWarnings({&quot;PMD.DataClass&quot;, &quot;PMD.AtLeastOneConstructor&quot;})
+<span class="fc" id="L9">public class FibonacciNumber {</span>
+
+  /** Index of this number in the fibonacci sequence. */
+  private long fibonacciIndex;
+  /** The value of this fibonacci number. */
+  private long fibonacciValue;
+
+  public long getFibonacciIndex() {
+<span class="fc" id="L17">    return fibonacciIndex;</span>
+  }
+
+  public void setFibonacciIndex(final long index) {
+<span class="fc" id="L21">    this.fibonacciIndex = index;</span>
+<span class="fc" id="L22">  }</span>
+
+  public long getFibonacciValue() {
+<span class="fc" id="L25">    return fibonacciValue;</span>
+  }
+
+  public void setFibonacciValue(final long fibValue) {
+<span class="fc" id="L29">    this.fibonacciValue = fibValue;</span>
+<span class="fc" id="L30">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

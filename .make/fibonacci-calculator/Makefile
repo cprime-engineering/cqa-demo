@@ -1,52 +1,52 @@
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
-# Name: fibonacci-service
+# Name: fibonacci-calculator
 # Description: A spring boot microservice implementation for the Fibonacci DevOps demo.
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------------
 #
-# Begin fibonacci-service make targets
+# Begin fibonacci-calculator make targets
 #
 #--------------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------------
 # run local
 #--------------------------------------------------------------------------------------------------------------
-# Run the fibonacci-service locally within the developer IDE using docker.
+# Run the fibonacci-calculator locally within the developer IDE using docker.
 #--------------------------------------------------------------------------------------------------------------
-fibonacci-service/run-local: fibonacci-service/containerize-local
-	docker run -p 8080:8080 fibonacci-service:latest
+fibonacci-calculator/run-local: fibonacci-calculator/containerize-local
+	docker run -p 8080:8080 fibonacci-calculator:latest
 
 #--------------------------------------------------------------------------------------------------------------
 # containerize local
 #--------------------------------------------------------------------------------------------------------------
-# Package the fibonacci-service in a docker container and publish locally.
+# Package the fibonacci-calculator in a docker container and publish locally.
 #--------------------------------------------------------------------------------------------------------------
-fibonacci-service/containerize-local: fibonacci-service/package-local
-	docker build -f Dockerfile -t fibonacci-service:latest .
+fibonacci-calculator/containerize-local: fibonacci-calculator/package-local
+	docker build -f ./micro-services/fibonacci-calculator/Dockerfile -t fibonacci-calculator:latest ./micro-services/fibonacci-calculator
 
 #--------------------------------------------------------------------------------------------------------------
 # package local
 #--------------------------------------------------------------------------------------------------------------
-# Package the fibonacci-service java application in a JAR.
+# Package the fibonacci-calculator java application in a JAR.
 #--------------------------------------------------------------------------------------------------------------
-fibonacci-service/package-local:
-	mvn package
+fibonacci-calculator/package-local:
+	cd ./micro-services/fibonacci-calculator && mvn package
 
 #--------------------------------------------------------------------------------------------------------------
 # scan local
 #--------------------------------------------------------------------------------------------------------------
-# Scan the fibonacci-service in container for vulnerabilities.
+# Scan the fibonacci-calculator in container for vulnerabilities.
 #--------------------------------------------------------------------------------------------------------------
-fibonacci-service/scan-local: fibonacci-service/containerize-local
-	grype fibonacci-service:latest
-	snyk container test  fibonacci-service:latest
+fibonacci-calculator/scan-local: fibonacci-calculator/containerize-local
+	grype fibonacci-calculator:latest
+	snyk container test  fibonacci-calculator:latest
 
 #--------------------------------------------------------------------------------------------------------------
 #
-# End fibonacci-service make targets
+# End fibonacci-calculator make targets
 #
 #--------------------------------------------------------------------------------------------------------------

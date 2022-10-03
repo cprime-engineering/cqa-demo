@@ -32,7 +32,7 @@ jobs:
             ${{ matrix.java }}${{ matrix.os }}
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
-        run: mvn test
+        run: cd ./micro-services/fibonacci-calculator && mvn test
         env:
           MAVEN_REGISTRY_USERNAME: ${{ secrets.MAVEN_REGISTRY_USERNAME }}
           MAVEN_REGISTRY_TOKEN: ${{ secrets.MAVEN_REGISTRY_TOKEN }}
@@ -57,7 +57,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Deploy jar to maven packages repository
-        run: mvn --batch-mode deploy
+        run: cd ./micro-services/fibonacci-calculator && mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Package GitHub Containers
